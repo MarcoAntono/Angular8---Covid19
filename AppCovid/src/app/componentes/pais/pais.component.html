@@ -1,0 +1,17 @@
+<div class="jumbotron bg-white text-center">
+    <h1 class="display-4">Covid 19 - Corona virus</h1>
+
+    <div class="col-md-4 offset-md-4">
+        <div class="form-group">
+            <label for="idPais">Seleccionar País</label>
+            <select name="idP" id="idP" class="form-control" #input  (change)="updatePais(input.value)">
+                <option value="{{element.Country}}" *ngFor="let element of countris"> {{ element.Country }}</option>
+            </select>
+
+        </div>
+    </div>
+
+    <app-dashboard-card [NewConfirmed]='NewConfirmed' [TotalConfirmed]='TotalConfirmed' [NewDeaths]='NewDeaths'
+        [TotalDeaths]='TotalDeaths' [NewRecovered]='NewRecovered' [TotalRecovered]='TotalRecovered'></app-dashboard-card>
+
+</div>

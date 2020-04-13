@@ -1,0 +1,27 @@
+<div class="jumbotron bg-white text-center">
+    <h1 class="display-4">Covid 19 - Corona virus</h1>
+    <p class="lead"> La COVID-19 es una enfermedad infecciosa causada por un nuevo virus que no había sido detectado en humanos hasta
+        la fecha. El virus causa una enfermedad respiratoria como la gripe (influenza) con diversos síntomas (tos,
+        fiebre, etc.) que, en casos graves, puede producir una neumonía. Para protegerse puede lavarse las manos
+        regularmente y evitar tocarse la cara. </p>
+    <hr class="my-4">
+    <h3>Datos Globales</h3>
+  <app-dashboard-card  [NewConfirmed]= 'NewConfirmed' 
+  [TotalConfirmed]= 'TotalConfirmed' 
+  [NewDeaths]= 'NewDeaths' 
+  [TotalDeaths]= 'TotalDeaths' 
+  [NewRecovered]= 'NewRecovered' 
+  [TotalRecovered]= 'TotalRecovered' 
+  
+  ></app-dashboard-card>
+
+</div>
+
+<div class="row">
+ <div class="col-6">
+    <google-chart [data]="pieChart"></google-chart>
+ </div>
+ <div class="col-6">
+    <google-chart [data]="columnChart"></google-chart>
+ </div>
+</div>
